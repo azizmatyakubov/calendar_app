@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #FFB300;
+}
+
+.header-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+
+.wrapper {
+    display: flex;
+}
+
+.calendar {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 800px;
+    height: 500px;
+    border: 1px solid black;
+    margin: 12px;
+    padding: 16px;
+    border-radius: 4px;
+}
+
+.second-part {
+    flex: 1;
+}
+
+.appointments {
+    flex: 1;
+    height: 300px;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin: 12px;
+}
+
+.todos {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    flex: 1;
+    margin: 12px;
+    height: 50px;
+    border-radius: 4px;
+}
+
+.todos-title {
+    display: flex;
+    justify-content: center;
+    flex: 0.8;
+}
+
+.todos-time {
+    flex: 0.2;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.day {
+        background-color: #6200EE;
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+    margin: 4px;
+    width: 100px;
+    height: 75px;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 24px;
+}
+
+.day:hover {
+    cursor: pointer;
+}
+
+.selected { 
+    background-color: red;
+}
+
+.circle {
+    border-radius: 50%;
+    border: 1px solid black;
+    height: 25px;
+    width: 25px;
+}
+
+.inputs {
+    border: 1px solid black;
+    flex: 1;
+    height: 216px;
+    margin: 12px;
+}
+
+.appointment-title {
+    width: 400px;
+    height: 30px;
+    padding: 25px;
+    margin: 25px;
+    outline: none;
+}
