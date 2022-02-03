@@ -1,6 +1,6 @@
 // calendar database
 let calendar = {
-    '1': [{'description': 'Call Eric'}]}
+    '1': [{'description': 'Call Eric', 'time': '19:30'},{'description': 'Call Eric', 'time': '19:30'}, {'description': 'Call Eric', 'time': '19:30'}]}
 
 
 window.onload = () => {
@@ -20,7 +20,7 @@ const createDays = () => {
         calendarDiv.appendChild(dayDiv)
     }
 
-    calendar[dayOfTheMonth] = []
+    //calendar[dayOfTheMonth] = []
 
 }
 
@@ -37,15 +37,35 @@ const clickDay = (e) => {
 
 
 const displayMeetingsForDay = (selectedDaysNumber) => {
+    
     let meetingsListForToday = calendar[selectedDaysNumber]
 
-    let todos = document.getElementsByClassName('todos')
-    todos.innerText = ''
+    // Remove innerText of todos div
+    let appointments = document.getElementsByClassName('appointments')[0]
+    appointments.innerText = ''
 
-    for(let meeting of meetingsListForToday) {
+    // Looping each element of selected days array
+    for(let i=0; i<meetingsListForToday.length; i++) {
+
+        // Create Nodes
         let h3ForList = document.createElement('h3')
+        let divForList = document.createElement('div')
+        let divForTodos = document.createElement('div')
+        // Add Classes
         h3ForList.classList.add('todos-title')
-        h3ForList.innerText = meeting.description
-        todos.appendChild(h3ForList)
+        divForList.classList.add('todos-time')
+        divForTodos.classList.add('todos')
+
+        // Add innerText
+        h3ForList.innerText = meetingsListForToday[i]['description']
+        divForList.innerText =  meetingsListForToday[i]['time']
+      
+        // Append children to todos div
+        divForTodos.appendChild(h3ForList)
+        divForTodos.appendChild(divForList)
+        console.log(divForTodos)
+
+        // Append to todos div
+        appointments.appendChild(divForTodos)
     }
 }
