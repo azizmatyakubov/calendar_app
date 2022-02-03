@@ -10,9 +10,17 @@ const day = () => {
         let day = document.createElement('div')
         day.classList.add('day')
         day.innerText = i
+        day.addEventListener('click', clickDay)
         calendar.appendChild(day)
     }
 
 
 }
 
+
+const clickDay = (e) => {
+    if(document.querySelector('.selected') !== null) {
+        document.querySelector('.selected').classList.remove('selected')
+    }
+    e.target.classList.add('selected')
+}
