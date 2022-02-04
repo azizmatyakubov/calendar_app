@@ -118,5 +118,6 @@ const addMeeting = () => {
     // Push object to array
     meetingsForSelectedDay.push(newTodos)
 
+    // Display meetings
     displayMeetingsForDay(selectedDayAsString)
 }
