@@ -15,7 +15,9 @@ body {
     margin-top: 16px;
 }
 
+
 .calendar-container {
+    box-sizing: border-box;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
