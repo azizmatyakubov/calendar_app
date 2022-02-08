@@ -15,14 +15,18 @@ body {
     margin-top: 16px;
 }
 
+.wrapper {
+    display: flex;
+}
 
 .calendar-container {
-    box-sizing: border-box;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    width: 800px;
     height: 500px;
     border: none;
+    margin: 12px;
     padding: 16px;
     border-radius: 12px;
     background-color: #ffffff;
@@ -31,26 +35,20 @@ body {
     box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
 }
 
+.second-part {
+    flex: 1;
+}
+
 .appointments {
     background-color: #ffffff;
     -webkit-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
     -moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
     box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
-    height: 250px;
+    flex: 1;
+    height: 300px;
     border: 1px solid white;
     border-radius: 12px;
-}
-
-.first-part {
-    margin: 0;
-    background-color: #19282F;
-    padding: 15px;
-}
-
-.second-part {
-    margin: 0;
-    background-color: #00ff84;
-    padding: 15px;
+    margin: 12px;
 }
 
 .todos {
@@ -126,7 +124,9 @@ body {
     -moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
     box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
     border-radius: 12px;
+    flex: 1;
     height: 216px;
+    margin: 12px;
 }
 
 
